@@ -1,5 +1,7 @@
-:root { /*Gradient Variabler som kontrollerar färgerna för navbar och footer hos de olika sidorna*/
+:root { /*Gradient Variabler som kontrollerar färgerna för outlines och buttons*/
     --gradient: repeating-linear-gradient(90deg, rgba(255, 155, 0, 0.2) 0px, rgba(255, 155, 0, 0.4) 100px, rgba(255, 155, 0, 0.3) 200px, rgba(255, 155, 0, 0.4) 300px, rgba(255, 155, 0, 0.2) 400px, rgba(255, 155, 0, 0.2) 500px);
+    --outline: -3px -3px 0px rgb(46, 39, 0), -3px 3px 0px rgb(46, 39, 0), 3px -3px 0px rgb(46, 39, 0), 3px 3px 0px rgb(46, 39, 0), 3px 0px 0px rgb(46, 39, 0), -3px 0px 0px rgb(46, 39, 0), 0px -3px 0px rgb(46, 39, 0), 0px 3px 0px rgb(46, 39, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
+    --outlineselected: -3px -3px 0px rgb(105, 90, 0), -3px 3px 0px rgb(105, 90, 0), 3px -3px 0px rgb(105, 90, 0), 3px 3px 0px rgb(105, 90, 0), 3px 0px 0px rgb(105, 90, 0), -3px 0px 0px rgb(105, 90, 0), 0px -3px 0px rgb(105, 90, 0), 0px 3px 0px rgb(105, 90, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
 }
 
 .about{
@@ -32,15 +34,13 @@
 
 .navbar {   /*Navbar position dessutom ser till att navbar har plats mellan kanterna*/
     position: fixed;
-    top: 10px;
-    left: 10px;
-    right: 10px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     box-sizing: border-box;
-    background-size: 32px;
-    background-position: -1px 12px;
     margin: 0 auto;
-    backdrop-filter: blur(10px);
-    background-image: url("Bilder/HexagonTile.png");
+    background-size: contain;
+    background-image: url("./Assets/Navbar.png");
 }
 
 .navbar ul { /*Navbar bakgrund.*/
@@ -73,16 +73,17 @@
 
 .navbar ul li a { /*Navbar link position*/
     display: block;
-    color: white;
+    color: rgb(128, 128, 128);
+    border: 2px rgba(255, 255, 255, 0.1) solid;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-weight: bold;
-    text-shadow: 0px 0px 2px black, 0px 0px 10px black;
 }
 
 .navbar ul li a:hover { /*Navbar hover färg*/
-    background-color: #11111131;
+    background-color: #00000031;
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 720px) { /*Se till att navbar får plats för mobiler*/
@@ -181,7 +182,29 @@ h1 {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: -3px -3px 0px rgb(46, 26, 0), -3px 3px 0px rgb(46, 26, 0), 3px -3px 0px rgb(46, 26, 0), 3px 3px 0px rgb(46, 26, 0), 3px 0px 0px rgb(46, 26, 0), -3px 0px 0px rgb(46, 26, 0), 0px -3px 0px rgb(46, 26, 0), 0px 3px 0px rgb(46, 26, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
+    text-shadow: var(--outline);
+    background: linear-gradient(90deg, rgba(255, 155, 0, 0.0) 10%, rgba(255, 155, 0, 0.4) 50%, rgba(255, 155, 0, 0.0) 90%);
+    border-left: 4px solid rgba(255, 255, 255, 0.096);
+    border-right: 4px solid rgba(255, 255, 255, 0.096);
+    border-top: 4px solid rgba(255, 255, 255, 0.096);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.096);
+    animation: HCool 0.25s infinite alternate;
+    padding-bottom: 10px;
+}
+
+h1:hover {
+    text-shadow: var(--outlineselected);
+}
+
+@keyframes HCool { /*Button animation*/
+    0% {
+        border-top: 4px solid rgba(255, 255, 255, 0.192);
+        border-bottom: 4px solid rgba(255, 255, 255, 0.096);
+    }
+    100% {
+        border-top: 4px solid rgba(255, 255, 255, 0.096);
+        border-bottom: 4px solid rgba(255, 255, 255, 0.192);
+    }
 }
 
 h2 {
