@@ -2,11 +2,7 @@
     --gradient: repeating-linear-gradient(90deg, rgba(255, 155, 0, 0.2) 0px, rgba(255, 155, 0, 0.4) 100px, rgba(255, 155, 0, 0.3) 200px, rgba(255, 155, 0, 0.4) 300px, rgba(255, 155, 0, 0.2) 400px, rgba(255, 155, 0, 0.2) 500px);
     --outline: -3px -3px 0px rgb(46, 39, 0), -3px 3px 0px rgb(46, 39, 0), 3px -3px 0px rgb(46, 39, 0), 3px 3px 0px rgb(46, 39, 0), 3px 0px 0px rgb(46, 39, 0), -3px 0px 0px rgb(46, 39, 0), 0px -3px 0px rgb(46, 39, 0), 0px 3px 0px rgb(46, 39, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
     --outlineselected: -3px -3px 0px rgb(105, 90, 0), -3px 3px 0px rgb(105, 90, 0), 3px -3px 0px rgb(105, 90, 0), 3px 3px 0px rgb(105, 90, 0), 3px 0px 0px rgb(105, 90, 0), -3px 0px 0px rgb(105, 90, 0), 0px -3px 0px rgb(105, 90, 0), 0px 3px 0px rgb(105, 90, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
-    --outlinesmall: -1px -1px 0px rgb(46, 39, 0), -1px 1px 0px rgb(46, 39, 0), 1px -1px 0px rgb(46, 39, 0), 1px 1px 0px rgb(46, 39, 0), 1px 0px 0px rgb(46, 39, 0), -1px 0px 0px rgb(46, 39, 0), 0px -1px 0px rgb(46, 39, 0), 0px 1px 0px rgb(46, 39, 0), 0px 2px 0px rgb(0, 0, 0), 1px 2px 0px rgb(0, 0, 0), -1px 2px 0px rgb(0, 0, 0);
-}
-
-.about{
-    --gradient: repeating-linear-gradient(90deg, rgba(100, 100, 100, 0.2) 0px, rgba(100, 100, 100, 0.4) 100px, rgba(100, 100, 100, 0.3) 200px, rgba(100, 100, 100, 0.4) 300px, rgba(100, 100, 100, 0.2) 400px, rgba(100, 100, 100, 0.2) 500px);
+    --outlinesmall: -2px -2px 0px rgb(46, 39, 0), -2px 2px 0px rgb(46, 39, 0), 2px -2px 0px rgb(46, 39, 0), 2px 2px 0px rgb(46, 39, 0), 2px 0px 0px rgb(46, 39, 0), -2px 0px 0px rgb(46, 39, 0), 0px -2px 0px rgb(46, 39, 0), 0px 2px 0px rgb(46, 39, 0), -1px 4px 0px rgb(0, 0, 0), 1px 4px 0px rgb(0, 0, 0), 0px 4px 0px rgb(0, 0, 0);
 }
 
 .login{
@@ -28,7 +24,7 @@
 
 .navbar ul { /*Navbar bakgrund.*/
     list-style-type: none;
-    margin: 5px 0px 5px 0px;
+    margin: 0px 0px 5px 0px;
     padding: 0;
     display: flex;
 }
@@ -55,7 +51,8 @@
     padding: 8px 16px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255);
 }
 
 .navbar ul li a:hover { /*Navbar hover färg*/
@@ -130,10 +127,21 @@ body{
     padding-top: 360px;
 }
 
+.buttonborder {
+    padding: 4px;
+    background-image: var(--gradient);
+    flex-wrap: wrap;
+    display: inline-flex;
+}
+
 button {
-    border: 2px solid rgba(0, 0, 0, 1);
-    padding: 20px 30px;
+    padding: 15px 40px;
     background-color: #00000000;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: var(--outlinesmall);
+    border: none;
 }
 
 button:hover {
@@ -142,11 +150,11 @@ button:hover {
 
 @keyframes Button { /*Button animation*/
     0% {
-        padding: 20px 30px;
+        padding: 15px 40px;
         background-color: #00000000;
     }
     100% {
-        padding: 20px 40px;
+        padding: 16px 50px;
         background-color: #00000033;
     }
 }
@@ -226,7 +234,7 @@ p {
 
 footer {
     
-
+    
     background: url(./Assets/Footer.png);
     margin: 100px auto 0px auto;
     padding: 10px 0px 25px;
@@ -239,4 +247,5 @@ footer {
 footer p{
     color: rgb(128, 128, 128);
     font-weight: 900;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255);
 }
