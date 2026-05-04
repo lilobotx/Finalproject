@@ -3,6 +3,7 @@
     --outline: -3px -3px 0px rgb(46, 39, 0), -3px 3px 0px rgb(46, 39, 0), 3px -3px 0px rgb(46, 39, 0), 3px 3px 0px rgb(46, 39, 0), 3px 0px 0px rgb(46, 39, 0), -3px 0px 0px rgb(46, 39, 0), 0px -3px 0px rgb(46, 39, 0), 0px 3px 0px rgb(46, 39, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
     --outlineselected: -3px -3px 0px rgb(105, 90, 0), -3px 3px 0px rgb(105, 90, 0), 3px -3px 0px rgb(105, 90, 0), 3px 3px 0px rgb(105, 90, 0), 3px 0px 0px rgb(105, 90, 0), -3px 0px 0px rgb(105, 90, 0), 0px -3px 0px rgb(105, 90, 0), 0px 3px 0px rgb(105, 90, 0), 0px 5px 0px rgb(0, 0, 0), 2px 5px 0px rgb(0, 0, 0), -2px 5px 0px rgb(0, 0, 0);
     --outlinesmall: -2px -2px 0px rgb(46, 39, 0), -2px 2px 0px rgb(46, 39, 0), 2px -2px 0px rgb(46, 39, 0), 2px 2px 0px rgb(46, 39, 0), 2px 0px 0px rgb(46, 39, 0), -2px 0px 0px rgb(46, 39, 0), 0px -2px 0px rgb(46, 39, 0), 0px 2px 0px rgb(46, 39, 0), -1px 4px 0px rgb(0, 0, 0), 1px 4px 0px rgb(0, 0, 0), 0px 4px 0px rgb(0, 0, 0);
+    --outlinesmallselected: -2px -2px 0px rgb(105, 90, 0), -2px 2px 0px rgb(105, 90, 0), 2px -2px 0px rgb(105, 90, 0), 2px 2px 0px rgb(105, 90, 0), 2px 0px 0px rgb(105, 90, 0), -2px 0px 0px rgb(105, 90, 0), 0px -2px 0px rgb(105, 90, 0), 0px 2px 0px rgb(105, 90, 0), -1px 4px 0px rgb(0, 0, 0), 1px 4px 0px rgb(0, 0, 0), 0px 4px 0px rgb(0, 0, 0);
 }
 
 .login{
@@ -127,13 +128,6 @@ body{
     padding-top: 360px;
 }
 
-.buttonborder {
-    padding: 4px;
-    background-image: var(--gradient);
-    flex-wrap: wrap;
-    display: inline-flex;
-}
-
 button {
     padding: 15px 40px;
     background-color: #00000000;
@@ -141,21 +135,59 @@ button {
     font-size: 18px;
     font-weight: 700;
     text-shadow: var(--outlinesmall);
-    border: none;
+    box-shadow: 0px 5px 0px rgb(0, 0, 0, 0.5);
+    border-top: 4px groove rgb(105, 90, 0);
+    border-left: 6px groove rgb(80, 70, 0);
+    border-right: 6px ridge rgb(80, 70, 0);
+    border-bottom: 4px ridge rgb(105, 90, 0);
+    outline-color: rgb(50, 45, 0);
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    animation: Button 0.25s forwards;
+    box-shadow: 0px 10px 0px rgb(0, 0, 0, 0.5);
+    padding: 15px 50px;
+    animation: ButtonYellow 2s infinite linear;
+    text-shadow: var(--outlinesmallselected);
+    background-color: rgb(105, 90, 0, 0.4);
 }
 
-@keyframes Button { /*Button animation*/
+@keyframes ButtonYellow { /*Yellow Button animation*/
     0% {
-        padding: 15px 40px;
-        background-color: #00000000;
+    border-top: 4px solid rgb(105, 90, 0);
+    border-left: 6px solid rgb(105, 90, 0);
+    border-right: 6px solid rgb(105, 90, 0);
+    border-bottom: 4px solid rgb(105, 90, 0);
+    }
+    20% {
+    border-top: 4px solid rgb(39, 33, 0);
+    border-left: 6px solid rgb(155, 132, 0);
+    border-right: 6px solid rgb(136, 116, 0);
+    border-bottom: 4px solid rgb(43, 36, 0);
+    }
+        40% {
+    border-top: 4px solid rgb(192, 163, 0);
+    border-left: 6px solid rgb(105, 90, 0);
+    border-right: 6px solid rgb(41, 35, 0);
+    border-bottom: 4px solid rgb(105, 90, 0);
+    }
+        60% {
+    border-top: 4px solid rgb(105, 90, 0);
+    border-left: 6px solid rgb(56, 48, 0);
+    border-right: 6px solid rgb(165, 140, 0);
+    border-bottom: 4px solid rgb(165, 140, 0);
+    }
+        80% {
+    border-top: 4px solid rgb(180, 153, 0);
+    border-left: 6px solid rgb(105, 90, 0);
+    border-right: 6px solid rgb(54, 46, 0);
+    border-bottom: 4px solid rgb(46, 39, 0);
     }
     100% {
-        padding: 16px 50px;
-        background-color: #00000033;
+    border-top: 4px solid rgb(105, 90, 0);
+    border-left: 6px solid rgb(105, 90, 0);
+    border-right: 6px solid rgb(105, 90, 0);
+    border-bottom: 4px solid rgb(105, 90, 0);
     }
 }
 
