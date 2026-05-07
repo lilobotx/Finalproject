@@ -149,13 +149,14 @@ body {
   animation: MKWBGScroll 140s infinite linear;
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.flexbuttongrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
   margin: 0px auto;
   flex-wrap: wrap;
   max-width: 800px;
+  gap: 10px;
 }
 
 .flex2 {
