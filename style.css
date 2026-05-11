@@ -159,6 +159,18 @@ body {
   gap: 16px;
 }
 
+.flexbuttongrid button{
+  max-height: 150px;
+  min-height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  padding: 0px;
+}
+
+.flexbuttongrid button:hover{
+  padding: 0px;
+}
+
 .flex2 {
   display: flex;
   flex-direction: row;
