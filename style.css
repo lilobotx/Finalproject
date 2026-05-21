@@ -387,7 +387,7 @@ footer p {
 
 .Progessbarfill {
   height: 10px;
-  width: 100%;
+  width: 50%;
   background: var(--gradient);
   border-radius: 10px;
   animation: ProgressAnim 2s forwards;
