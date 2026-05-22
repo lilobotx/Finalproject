@@ -33,20 +33,20 @@
           <div class="CompareFlex">
             <div class="SelectedFormat">
               <h2>Selected</h2>
-              <img id="SelectedIMG" src="../Assets/Easy.webp" alt="gd easy" />
+              <img id="SelectedIMG" src="../Assets/PNG.png" alt="gd easy" />
             </div>
             <div class="Stats">
               <h2>Stats</h2>
               <div class="Statelement">
                 <div class="StatText">
                   <h3>Quality</h3>
-                  <h3 style="text-align: right" id="NumQualityStat">100/100</h3>
+                  <h3 style="text-align: right" id="NumQualityStat">95/100</h3>
                 </div>
                 <div class="Progessbar">
                   <div
                     id="StatQuality"
                     class="Progessbarfill"
-                    style="width: 10%"
+                    style="width: 95%"
                   ></div>
                 </div>
               </div>
@@ -54,27 +54,27 @@
                 <div class="StatText">
                   <h3>Efficiency</h3>
                   <h3 style="text-align: right" id="NumEfficiencyStat">
-                    100/100
+                    75/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
                     id="StatEfficiency"
                     class="Progessbarfill"
-                    style="width: 10%"
+                    style="width: 75%"
                   ></div>
                 </div>
               </div>
               <div class="Statelement">
                 <div class="StatText">
                   <h3>Speed</h3>
-                  <h3 style="text-align: right" id="NumSpeedStat">100/100</h3>
+                  <h3 style="text-align: right" id="NumSpeedStat">50/100</h3>
                 </div>
                 <div class="Progessbar">
                   <div
                     id="StatSpeed"
                     class="Progessbarfill"
-                    style="width: 10%"
+                    style="width: 50%"
                   ></div>
                 </div>
               </div>
@@ -82,23 +82,48 @@
                 <div class="StatText">
                   <h3>Compatibility</h3>
                   <h3 style="text-align: right" id="NumCompatibilityStat">
-                    100/100
+                    95/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
                     id="StatCompatibility"
                     class="Progessbarfill"
-                    style="width: 10%"
+                    style="width: 95%"
                   ></div>
                 </div>
               </div>
-              <p>
-                This is the compatibility of the format. It shows how many
-                devices and software can open the format.
-              </p>
             </div>
           </div>
+        </div>
+        <div>
+          <h1 id="SelectedFormatText">PNG</h1>
+          <h3>Quality</h3>
+          <p id="QualityDisc">
+            PNG is a lossless format, which means that it preserves all image
+            details and colors in up to 8-bit per channels RGBA. It is ideal for
+            images that require high quality and transparency, such as logos and
+            graphics.
+          </p>
+          <h3>Efficiency</h3>
+          <p id="EfficiencyDisc">
+            PNG uses lossless compression, which means that it can achieve
+            smaller file sizes than uncompressed formats like BMP, while still
+            preserving all image details and colors. However, it is not as
+            efficient as lossy formats like JPEG, which can achieve much smaller
+            file sizes by sacrificing some image quality.
+          </p>
+          <h3>Speed</h3>
+          <p id="SpeedDisc">
+            Higher quality formats like PNG can take longer to load and display
+            than lossy formats like JPEG, due to their larger file sizes and
+            more complex compression algorithms.
+          </p>
+          <h3>Compatibility</h3>
+          <p id="CompatibilityDisc">
+            PNG is widely supported by web browsers, image editing software, and
+            other applications.
+          </p>
         </div>
         <div class="flexbuttongrid">
           <button id="PNGButton">
@@ -142,6 +167,31 @@
             />
           </button>
         </div>
+      </div>
+      <div>
+        <h1>Statistics Description</h1>
+        <h3>Quality</h3>
+        <p>
+          This is the quality of the format. It shows how well the format
+          preserves image details and colors. It is based on the average quality
+          of a image from this format and not the maximum quality.
+        </p>
+        <h3>Efficiency</h3>
+        <p>
+          This is the efficiency of the format. It shows how well the format
+          balances quality and file size.
+        </p>
+        <h3>Speed</h3>
+        <p>
+          This is the speed of the format. It shows how quickly the format can
+          be loaded and displayed in web based senarios. This is mostly based on
+          the file size of the format where lower file sizes will score higher.
+        </p>
+        <h3>Compatibility</h3>
+        <p>
+          This is the compatibility of the format. It shows how many devices and
+          software can open the format.
+        </p>
       </div>
     </div>
     <footer>
