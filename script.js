@@ -17,6 +17,9 @@ const QualityDisc = document.getElementById("QualityDisc");
 const EfficiencyDisc = document.getElementById("EfficiencyDisc");
 const SpeedDisc = document.getElementById("SpeedDisc");
 const CompatibilityDisc = document.getElementById("CompatibilityDisc");
+const NameInput = document.getElementById("name");
+const CommentInput = document.getElementById("comment");
+const SubmitButton = document.getElementById("submit");
 
 let selectedFormat = "../Assets/PNG.png";
 
@@ -150,4 +153,34 @@ SVGButton.addEventListener("click", function (event) {
     "SVG files are generally smaller and load faster than raster image files depenging on the complexity of the image. Simple SVG files can load very quickly, while complex SVG files with many details and animations may take longer to load and render.";
   CompatibilityDisc.textContent =
     "SVG is widely supported by web browsers, few image editing software, and applications. However, because it is a vector format, it may not be supported by older software that only support raster formats.";
+});
+
+SubmitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const name = NameInput.value.trim();
+  const text = CommentInput.value.trim();
+
+  if (text != "") {
+    const CommenterName = document.createElement("h3");
+    const newComment = document.createElement("p");
+    CommenterName.classList.add("commentername");
+    newComment.classList.add("comment");
+    newComment.textContent = text;
+    CommenterName.textContent = name || "Anonymous";
+    CommentInput.value = "";
+    document
+      .getElementById("CommentDisplay")
+      .insertBefore(
+        newComment,
+        document.getElementById("CommentDisplay").firstChild,
+      );
+    document
+      .getElementById("CommentDisplay")
+      .insertBefore(
+        CommenterName,
+        document.getElementById("CommentDisplay").firstChild,
+      );
+  } else {
+    alert("Please enter a comment before submitting.");
+  }
 });
