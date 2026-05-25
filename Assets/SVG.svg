@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="300mm"
+   height="300mm"
+   viewBox="0 0 300 300"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.39404297"
-     inkscape:cx="158.61214"
-     inkscape:cy="491.0632"
+     inkscape:zoom="0.27863046"
+     inkscape:cx="-69.985171"
+     inkscape:cy="550.90891"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -39,19 +39,21 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#c2c500;fill-opacity:1;stroke-width:0.264583"
-       d="M 169.54316,70.838823 V 211.84501 H 44.651962 V 15.779262 h 47.002064 z"
-       id="path1" />
+       style="fill:#c2c500;fill-opacity:1;stroke-width:0.409797"
+       d="M 252.7249,87.344506 V 294.99061 H 49.273105 V 6.263645 H 188.81183 Z"
+       id="path1"
+       sodipodi:nodetypes="cccccc" />
     <text
        xml:space="preserve"
-       style="font-size:50.8px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-       x="53.716648"
-       y="117.50514"
-       id="text2"><tspan
+       style="font-size:78.6813px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.409797"
+       x="60.88744"
+       y="164.14543"
+       id="text2"
+       transform="scale(1.0517731,0.95077542)"><tspan
          sodipodi:role="line"
          id="tspan2"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="53.716648"
-         y="117.50514">SVG</tspan></text>
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.409797"
+         x="60.88744"
+         y="164.14543">SVG</tspan></text>
   </g>
 </svg>

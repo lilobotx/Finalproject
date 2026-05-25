@@ -39,7 +39,15 @@
               <h2>Stats</h2>
               <div class="Statelement">
                 <div class="StatText">
-                  <h3>Quality</h3>
+                  <h3 class="tooltip">
+                    Quality
+                    <p id="QualityDisc" class="tooltiptext">
+                      PNG is a lossless format, which means that it preserves
+                      all image details and colors up to 8-bit per channels
+                      RGBA. It is ideal for images that require high quality and
+                      transparency, such as logos and graphics.
+                    </p>
+                  </h3>
                   <h3 style="text-align: right" id="NumQualityStat">95/100</h3>
                 </div>
                 <div class="Progessbar">
@@ -52,7 +60,17 @@
               </div>
               <div class="Statelement">
                 <div class="StatText">
-                  <h3>Efficiency</h3>
+                  <h3 class="tooltip">
+                    Efficiency
+                    <p id="EfficiencyDisc" class="tooltiptext">
+                      PNG uses lossless compression, which means that it can
+                      achieve smaller file sizes than uncompressed formats like
+                      BMP, while still preserving all image details and colors.
+                      However, it is not as efficient as lossy formats like
+                      JPEG, which can achieve much smaller file sizes by
+                      sacrificing some image quality.
+                    </p>
+                  </h3>
                   <h3 style="text-align: right" id="NumEfficiencyStat">
                     75/100
                   </h3>
@@ -67,7 +85,14 @@
               </div>
               <div class="Statelement">
                 <div class="StatText">
-                  <h3>Speed</h3>
+                  <h3 class="tooltip">
+                    Speed
+                    <p id="SpeedDisc" class="tooltiptext">
+                      Higher quality formats like PNG can take longer to load
+                      and display than lossy formats like JPEG, due to their
+                      larger file sizes and more complex compression algorithms.
+                    </p>
+                  </h3>
                   <h3 style="text-align: right" id="NumSpeedStat">50/100</h3>
                 </div>
                 <div class="Progessbar">
@@ -80,7 +105,13 @@
               </div>
               <div class="Statelement">
                 <div class="StatText">
-                  <h3>Compatibility</h3>
+                  <h3 class="tooltip">
+                    Compatibility
+                    <p id="CompatibilityDisc" class="tooltiptext">
+                      PNG is widely supported by web browsers, image editing
+                      software, and other applications.
+                    </p>
+                  </h3>
                   <h3 style="text-align: right" id="NumCompatibilityStat">
                     95/100
                   </h3>
@@ -95,35 +126,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <h1 id="SelectedFormatText">PNG</h1>
-          <h3>Quality</h3>
-          <p id="QualityDisc">
-            PNG is a lossless format, which means that it preserves all image
-            details and colors in up to 8-bit per channels RGBA. It is ideal for
-            images that require high quality and transparency, such as logos and
-            graphics.
-          </p>
-          <h3>Efficiency</h3>
-          <p id="EfficiencyDisc">
-            PNG uses lossless compression, which means that it can achieve
-            smaller file sizes than uncompressed formats like BMP, while still
-            preserving all image details and colors. However, it is not as
-            efficient as lossy formats like JPEG, which can achieve much smaller
-            file sizes by sacrificing some image quality.
-          </p>
-          <h3>Speed</h3>
-          <p id="SpeedDisc">
-            Higher quality formats like PNG can take longer to load and display
-            than lossy formats like JPEG, due to their larger file sizes and
-            more complex compression algorithms.
-          </p>
-          <h3>Compatibility</h3>
-          <p id="CompatibilityDisc">
-            PNG is widely supported by web browsers, image editing software, and
-            other applications.
-          </p>
         </div>
         <div class="flexbuttongrid">
           <button id="PNGButton">

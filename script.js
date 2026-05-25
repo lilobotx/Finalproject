@@ -17,7 +17,6 @@ const QualityDisc = document.getElementById("QualityDisc");
 const EfficiencyDisc = document.getElementById("EfficiencyDisc");
 const SpeedDisc = document.getElementById("SpeedDisc");
 const CompatibilityDisc = document.getElementById("CompatibilityDisc");
-const SelectedFormatText = document.getElementById("SelectedFormatText");
 
 let selectedFormat = "../Assets/PNG.png";
 
@@ -41,7 +40,6 @@ PNGButton.addEventListener("click", function (event) {
     "Higher quality formats like PNG can take longer to load and display than lossy formats like JPEG, due to their larger file sizes and more complex compression algorithms.";
   CompatibilityDisc.textContent =
     "PNG is widely supported by web browsers, image editing software, and other applications.";
-  SelectedFormatText.textContent = "PNG";
 });
 
 JPGButton.addEventListener("click", function (event) {
@@ -64,7 +62,6 @@ JPGButton.addEventListener("click", function (event) {
     "JPG files are generally smaller and load faster than PNG files, making them a good choice for web images.";
   CompatibilityDisc.textContent =
     "JPG is widely supported by web browsers, image editing software, and other applications.";
-  SelectedFormatText.textContent = "JPG";
 });
 
 GIFButton.addEventListener("click", function (event) {
@@ -87,7 +84,6 @@ GIFButton.addEventListener("click", function (event) {
     "GIF files are generally larger and load slower because of the old compression technology compared to modern formats like PNG and WEBP.";
   CompatibilityDisc.textContent =
     "GIF is widely supported by web browsers, some image editing software, and other applications.";
-  SelectedFormatText.textContent = "GIF";
 });
 
 MP4Button.addEventListener("click", function (event) {
@@ -110,7 +106,6 @@ MP4Button.addEventListener("click", function (event) {
     "Video files are larger and take longer to load and play than image files.";
   CompatibilityDisc.textContent =
     "MP4 is widely supported by web browsers, video players, and other applications.";
-  SelectedFormatText.textContent = "MP4";
 });
 
 WEBPButton.addEventListener("click", function (event) {
@@ -133,7 +128,6 @@ WEBPButton.addEventListener("click", function (event) {
     "WEBP files are generally smaller and load faster than JPEG and PNG files.";
   CompatibilityDisc.textContent =
     "WEBP is widely supported by web browsers, image editing software, and other applications. But because it is a newer format, it may not be supported by older software and devices.";
-  SelectedFormatText.textContent = "WEBP";
 });
 
 SVGButton.addEventListener("click", function (event) {
@@ -156,5 +150,4 @@ SVGButton.addEventListener("click", function (event) {
     "SVG files are generally smaller and load faster than raster image files depenging on the complexity of the image. Simple SVG files can load very quickly, while complex SVG files with many details and animations may take longer to load and render.";
   CompatibilityDisc.textContent =
     "SVG is widely supported by web browsers, few image editing software, and applications. However, because it is a vector format, it may not be supported by older software that only support raster formats.";
-  SelectedFormatText.textContent = "SVG";
 });

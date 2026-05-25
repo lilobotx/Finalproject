@@ -426,6 +426,39 @@ footer p {
   padding: 0px;
 }
 
+.tooltip {
+  /*Credit https://www.w3schools.com/css/css_tooltip.asp*/
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  animation: TooltipAnim 0.5s infinite alternate;
+}
+
+@keyframes TooltipAnim {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    color: rgb(255, 243, 175);
+  }
+}
+
+.tooltiptext {
+  visibility: hidden;
+  max-width: 410px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: -40px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @media (max-width: 720px) {
   /*Se till att navbar får plats för mobiler*/
   .navbar ul {
@@ -440,5 +473,11 @@ footer p {
 
   .SelectedFormat {
     transform: translateX(0px);
+  }
+
+  .tooltiptext {
+    max-width: 300px;
+    top: 20px;
+    right: -105%;
   }
 }
