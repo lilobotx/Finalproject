@@ -88,20 +88,13 @@
   display: flex;
 }
 
-@keyframes MKWBorder {
-  /*Navbar animation*/
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: 10000px;
-  }
-}
-
 @keyframes MKWBGScroll {
   /*Background animation*/
+  0% {
+    background-position: 0px 0px;
+  }
   100% {
-    background-position: 0px -2000px;
+    background-position: 0px 12px;
   }
 }
 
@@ -132,9 +125,10 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("./Assets/Background.png");
-  background-size: 1440px;
+  background-repeat: repeat;
+  background-size: 3px;
   background-attachment: fixed;
-  animation: MKWBGScroll 140s infinite linear;
+  animation: MKWBGScroll 1s infinite linear;
 }
 
 button {
@@ -505,6 +499,7 @@ textarea {
   border-bottom: 4px ridge rgb(105, 90, 0);
   outline-color: rgb(50, 45, 0);
   transition: all 0.2s ease;
+  margin: 10px auto;
 }
 
 input:hover,
@@ -521,6 +516,13 @@ textarea:hover {
 
 .comment {
   border-top: 2px solid rgb(105, 90, 0);
+}
+
+iframe {
+  display: block;
+  margin: 30px auto;
+  max-width: 720px;
+  width: 100%;
 }
 
 @media (max-width: 720px) {

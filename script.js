@@ -36,11 +36,11 @@ PNGButton.addEventListener("click", function (event) {
   StatSpeed.style.width = "50%";
   StatCompatibility.style.width = "95%";
   QualityDisc.textContent =
-    "PNG is a lossless format, which means that it preserves all image details and colors in up to 8-bit per channels RGBA. It is ideal for images that require high quality and transparency, such as logos and graphics.";
+    "PNG is a lossless format, which means that it preserves all image details and colors in up to 8-bit per channels RGBA.";
   EfficiencyDisc.textContent =
-    "PNG uses lossless compression, which means that it can achieve smaller file sizes than uncompressed formats like BMP, while still preserving all image details and colors. However, it is not as efficient as lossy formats like JPEG, which can achieve much smaller file sizes by sacrificing some image quality.";
+    "PNG uses lossless compression reducing file size and preserving all image details and colors. However, it is not as efficient as lossy formats like JPEG, which can achieve much smaller file sizes by sacrificing some image quality.";
   SpeedDisc.textContent =
-    "Higher quality formats like PNG can take longer to load and display than lossy formats like JPEG, due to their larger file sizes and more complex compression algorithms.";
+    "Higher quality formats like PNG can take longer to load and display due to their larger file sizes and its more complex compression algorithms.";
   CompatibilityDisc.textContent =
     "PNG is widely supported by web browsers, image editing software, and other applications.";
 });
@@ -58,11 +58,10 @@ JPGButton.addEventListener("click", function (event) {
   StatSpeed.style.width = "90%";
   StatCompatibility.style.width = "100%";
   QualityDisc.textContent =
-    "JPG is a lossy format, which means that it compresses images by discarding some image data. It is ideal for photographs and images with many colors and gradients. While it can be lossless, it was not designed for that and is not as good at it as PNG. JPG does not support transparency. JPG struggles with images that have sharp edges and text, as it can introduce artifacts and blurring.";
+    "JPG is a lossy format (compresses images by discarding some image data). JPG does not support transparency. JPG struggles with images that have sharp edges and text, as it can introduce artifacts and blurring.";
   EfficiencyDisc.textContent =
-    "JPG uses lossy compression in multiple passes, which means that it can achieve much smaller file sizes than lossless formats like PNG, at the cost of some image quality.";
-  SpeedDisc.textContent =
-    "JPG files are generally smaller and load faster than PNG files, making them a good choice for web images.";
+    "JPG uses lossy compression in multiple passes. Can achieve much smaller file sizes at the cost of some image quality.";
+  SpeedDisc.textContent = "JPG files are usually small.";
   CompatibilityDisc.textContent =
     "JPG is widely supported by web browsers, image editing software, and other applications.";
 });
@@ -83,8 +82,7 @@ GIFButton.addEventListener("click", function (event) {
     "GIF is a simple format that supports animation and 1-bit transparency. It can only display up to 256 colors, which makes it unsuitable for photographs and images with many colors and gradients.";
   EfficiencyDisc.textContent =
     "GIF uses lossless compression, But the technology is so ancient that the compression is very inefficient.";
-  SpeedDisc.textContent =
-    "GIF files are generally larger and load slower because of the old compression technology compared to modern formats like PNG and WEBP.";
+  SpeedDisc.textContent = "GIF files are unessesarily large.";
   CompatibilityDisc.textContent =
     "GIF is widely supported by web browsers, some image editing software, and other applications.";
 });
@@ -102,7 +100,7 @@ MP4Button.addEventListener("click", function (event) {
   StatSpeed.style.width = "10%";
   StatCompatibility.style.width = "80%";
   QualityDisc.textContent =
-    "MP4 is a video format that supports high-quality video playback. It is ideal for videos that require high quality and smooth playback.";
+    "MP4 is a video format that supports high-quality video playback.";
   EfficiencyDisc.textContent =
     "MP4 uses mostly efficient compression depending on the codec used with H.264 being the most common and AV1 being the best in terms of efficiency. However, AV1 is not widely supported and requires much more processing power to encode and decode compared to H.264.";
   SpeedDisc.textContent =
@@ -127,8 +125,7 @@ WEBPButton.addEventListener("click", function (event) {
     "WEBP is a modern image format that supports both lossless and lossy compression.";
   EfficiencyDisc.textContent =
     "WEBP uses efficient compression, which means that it can achieve smaller file sizes than JPEG while still preserving image quality.";
-  SpeedDisc.textContent =
-    "WEBP files are generally smaller and load faster than JPEG and PNG files.";
+  SpeedDisc.textContent = "WEBP files are small and efficient.";
   CompatibilityDisc.textContent =
     "WEBP is widely supported by web browsers, image editing software, and other applications. But because it is a newer format, it may not be supported by older software and devices.";
 });
@@ -161,13 +158,128 @@ SubmitButton.addEventListener("click", function (event) {
   const text = CommentInput.value.trim();
 
   if (text != "") {
+    if (name.length > 24) {
+      alert("Name cannot exceed 24 characters.");
+      return;
+    } else {
+      if (
+        text.toLowerCase() === "it is only me" ||
+        text.toLowerCase() === "it's only me" ||
+        text.toLowerCase() === "overture" ||
+        text.toLowerCase() === "deel 6" ||
+        text.toLowerCase() === "its only me" ||
+        text.toLowerCase() === "ouverture"
+      ) {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/6378596402331648";
+        CommenterName.textContent = name || "Chud";
+        CommentInput.value = "";
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            newComment,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            CommenterName,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+      } else if (text == "deel 3") {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5824173536051200";
+        CommenterName.textContent = name || "Chud";
+        CommentInput.value = "";
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            newComment,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            CommenterName,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+      } else if (text == "overtime") {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5081172681555968";
+        CommenterName.textContent = name || "King";
+        CommentInput.value = "";
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            newComment,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            CommenterName,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+      } else if (text.toLowerCase().includes("wii")) {
+        const newComment = document.createElement("audio");
+        newComment.src = "../Assets/MM.opus";
+        newComment.autoplay = true;
+        newComment.loop = true;
+        newComment.volume = 0.1;
+        CommentInput.value = "";
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            newComment,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+      } else {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("p");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.textContent = text;
+        CommenterName.textContent = name || "Anonymous";
+        CommentInput.value = "";
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            newComment,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+        document
+          .getElementById("CommentDisplay")
+          .insertBefore(
+            CommenterName,
+            document.getElementById("CommentDisplay").firstChild,
+          );
+      }
+    }
+  } else {
+    alert("Please enter a comment before submitting.");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.href.endsWith("files.html")) {
     const CommenterName = document.createElement("h3");
     const newComment = document.createElement("p");
     CommenterName.classList.add("commentername");
     newComment.classList.add("comment");
-    newComment.textContent = text;
-    CommenterName.textContent = name || "Anonymous";
-    CommentInput.value = "";
+    newComment.textContent = "useless info that no one asked for";
+    CommenterName.textContent = "Passive Agressive Chud";
     document
       .getElementById("CommentDisplay")
       .insertBefore(
@@ -180,7 +292,5 @@ SubmitButton.addEventListener("click", function (event) {
         CommenterName,
         document.getElementById("CommentDisplay").firstChild,
       );
-  } else {
-    alert("Please enter a comment before submitting.");
   }
 });
