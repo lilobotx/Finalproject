@@ -67,7 +67,7 @@ SubmitButton.addEventListener("click", function (event) {
         Commented(CommenterName, newComment);
       } else if (
         text.toLowerCase() == "will you sail" ||
-        text.toLowerCase() == "spicies"
+        text.toLowerCase() == "spices"
       ) {
         const CommenterName = document.createElement("h3");
         const newComment = document.createElement("iframe");
