@@ -33,7 +33,7 @@
           <div class="CompareFlex">
             <div class="SelectedFormat">
               <h2>Selected</h2>
-              <img id="SelectedIMG" src="../Assets/PNG.png" alt="gd easy" />
+              <img id="SelectedIMG" src="../Assets/PNG.png" alt="PNG" />
             </div>
             <div class="Stats">
               <h2>Stats</h2>
@@ -43,9 +43,8 @@
                     Quality
                     <p id="QualityDisc" class="tooltiptext">
                       PNG is a lossless format, which means that it preserves
-                      all image details and colors up to 8-bit per channels
-                      RGBA. It is ideal for images that require high quality and
-                      transparency, such as logos and graphics.
+                      all image details and colors in up to 8-bit per channels
+                      RGBA.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumQualityStat">95/100</h3>
@@ -63,12 +62,10 @@
                   <h3 class="tooltip">
                     Efficiency
                     <p id="EfficiencyDisc" class="tooltiptext">
-                      PNG uses lossless compression, which means that it can
-                      achieve smaller file sizes than uncompressed formats like
-                      BMP, while still preserving all image details and colors.
-                      However, it is not as efficient as lossy formats like
-                      JPEG, which can achieve much smaller file sizes by
-                      sacrificing some image quality.
+                      PNG uses lossless compression reducing file size and
+                      preserving all image details and colors. However, it is
+                      not as efficient as lossy formats, which can achieve much
+                      smaller file sizes by sacrificing some image quality.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumEfficiencyStat">
@@ -89,8 +86,8 @@
                     Speed
                     <p id="SpeedDisc" class="tooltiptext">
                       Higher quality formats like PNG can take longer to load
-                      and display than lossy formats like JPEG, due to their
-                      larger file sizes and more complex compression algorithms.
+                      and display due to their larger file sizes and its more
+                      complex compression algorithms.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumSpeedStat">50/100</h3>
@@ -159,7 +156,11 @@
             ></video>
           </button>
           <button id="WEBPButton">
-            <img src="../Assets/WebP.webp" alt="Format 1" width="150px" />
+            <img
+              src="../Assets/WebP.webp"
+              alt="German castle WebP"
+              width="150px"
+            />
           </button>
           <button id="SVGButton">
             <img
@@ -215,6 +216,7 @@
         <p>Lilobotx</p>
       </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="../Script/Files.js"></script>
+    <script src="../Script/Comment.js"></script>
   </body>
 </html>

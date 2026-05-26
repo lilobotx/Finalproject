@@ -1,9 +1,9 @@
-const PNGButton = document.getElementById("PNGButton");
-const JPGButton = document.getElementById("JPGButton");
-const GIFButton = document.getElementById("GIFButton");
-const MP4Button = document.getElementById("MP4Button");
-const WEBPButton = document.getElementById("WEBPButton");
-const SVGButton = document.getElementById("SVGButton");
+const OLEDButton = document.getElementById("OLEDButton");
+const IPSButton = document.getElementById("IPSButton");
+const VAButton = document.getElementById("VAButton");
+const TNButton = document.getElementById("TNButton");
+const CRTButton = document.getElementById("CRTButton");
+const MicroLEDButton = document.getElementById("MicroLEDButton");
 const SelectedIMG = document.getElementById("SelectedIMG");
 const StatQuality = document.getElementById("StatQuality");
 const StatEfficiency = document.getElementById("StatEfficiency");
@@ -17,13 +17,10 @@ const QualityDisc = document.getElementById("QualityDisc");
 const EfficiencyDisc = document.getElementById("EfficiencyDisc");
 const SpeedDisc = document.getElementById("SpeedDisc");
 const CompatibilityDisc = document.getElementById("CompatibilityDisc");
-const NameInput = document.getElementById("name");
-const CommentInput = document.getElementById("comment");
-const SubmitButton = document.getElementById("submit");
 
 let selectedFormat = "../Assets/PNG.png";
 
-PNGButton.addEventListener("click", function (event) {
+OLEDButton.addEventListener("click", function (event) {
   console.log("PNG Button Clicked");
   selectedFormat = "../Assets/PNG.png";
   SelectedIMG.src = selectedFormat;
@@ -38,7 +35,7 @@ PNGButton.addEventListener("click", function (event) {
   QualityDisc.textContent =
     "PNG is a lossless format, which means that it preserves all image details and colors in up to 8-bit per channels RGBA.";
   EfficiencyDisc.textContent =
-    "PNG uses lossless compression reducing file size and preserving all image details and colors. However, it is not as efficient as lossy formats like JPEG, which can achieve much smaller file sizes by sacrificing some image quality.";
+    "PNG uses lossless compression reducing file size and preserving all image details and colors. However, it is not as efficient as lossy formats, which can achieve much smaller file sizes by sacrificing some image quality.";
   SpeedDisc.textContent =
     "Higher quality formats like PNG can take longer to load and display due to their larger file sizes and its more complex compression algorithms.";
   CompatibilityDisc.textContent =
@@ -150,147 +147,4 @@ SVGButton.addEventListener("click", function (event) {
     "SVG files are generally smaller and load faster than raster image files depenging on the complexity of the image. Simple SVG files can load very quickly, while complex SVG files with many details and animations may take longer to load and render.";
   CompatibilityDisc.textContent =
     "SVG is widely supported by web browsers, few image editing software, and applications. However, because it is a vector format, it may not be supported by older software that only support raster formats.";
-});
-
-SubmitButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  const name = NameInput.value.trim();
-  const text = CommentInput.value.trim();
-
-  if (text != "") {
-    if (name.length > 24) {
-      alert("Name cannot exceed 24 characters.");
-      return;
-    } else {
-      if (
-        text.toLowerCase() === "it is only me" ||
-        text.toLowerCase() === "it's only me" ||
-        text.toLowerCase() === "overture" ||
-        text.toLowerCase() === "deel 6" ||
-        text.toLowerCase() === "its only me" ||
-        text.toLowerCase() === "ouverture"
-      ) {
-        const CommenterName = document.createElement("h3");
-        const newComment = document.createElement("iframe");
-        CommenterName.classList.add("commentername");
-        newComment.classList.add("comment");
-        newComment.src =
-          "https://musiclab.chromeexperiments.com/Song-Maker/embed/6378596402331648";
-        CommenterName.textContent = name || "Chud";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-      } else if (text == "deel 3") {
-        const CommenterName = document.createElement("h3");
-        const newComment = document.createElement("iframe");
-        CommenterName.classList.add("commentername");
-        newComment.classList.add("comment");
-        newComment.src =
-          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5824173536051200";
-        CommenterName.textContent = name || "Chud";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-      } else if (text == "overtime") {
-        const CommenterName = document.createElement("h3");
-        const newComment = document.createElement("iframe");
-        CommenterName.classList.add("commentername");
-        newComment.classList.add("comment");
-        newComment.src =
-          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5081172681555968";
-        CommenterName.textContent = name || "King";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-      } else if (text.toLowerCase().includes("wii")) {
-        const newComment = document.createElement("audio");
-        newComment.src = "../Assets/MM.opus";
-        newComment.autoplay = true;
-        newComment.loop = true;
-        newComment.volume = 0.1;
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-      } else {
-        const CommenterName = document.createElement("h3");
-        const newComment = document.createElement("p");
-        CommenterName.classList.add("commentername");
-        newComment.classList.add("comment");
-        newComment.textContent = text;
-        CommenterName.textContent = name || "Anonymous";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-      }
-    }
-  } else {
-    alert("Please enter a comment before submitting.");
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.href.endsWith("files.html")) {
-    const CommenterName = document.createElement("h3");
-    const newComment = document.createElement("p");
-    CommenterName.classList.add("commentername");
-    newComment.classList.add("comment");
-    newComment.textContent = "useless info that no one asked for";
-    CommenterName.textContent = "Passive Agressive Chud";
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        newComment,
-        document.getElementById("CommentDisplay").firstChild,
-      );
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        CommenterName,
-        document.getElementById("CommentDisplay").firstChild,
-      );
-  }
 });
