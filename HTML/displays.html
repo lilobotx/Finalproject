@@ -42,9 +42,7 @@
                   <h3 class="tooltip">
                     Color
                     <p id="QualityDisc" class="tooltiptext">
-                      PNG is a lossless format, which means that it preserves
-                      all image details and colors in up to 8-bit per channels
-                      RGBA.
+                      OLED screens have exellent color reproduction.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumQualityStat">100/100</h3>
@@ -62,9 +60,8 @@
                   <h3 class="tooltip">
                     Contrast
                     <p id="ContrastDisc" class="tooltiptext">
-                      PNG is a lossless format, which means that it preserves
-                      all image details and colors in up to 8-bit per channels
-                      RGBA.
+                      OLED displays have perfect contrast because they can turn
+                      off individual pixels.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumQualityStat">100/100</h3>
@@ -82,10 +79,9 @@
                   <h3 class="tooltip">
                     Efficiency
                     <p id="EfficiencyDisc" class="tooltiptext">
-                      PNG uses lossless compression reducing file size and
-                      preserving all image details and colors. However, it is
-                      not as efficient as lossy formats, which can achieve much
-                      smaller file sizes by sacrificing some image quality.
+                      OLED displays are more energy-efficient than traditional
+                      LCDs because they do not require a backlight. Each pixel
+                      emits its own light.
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumEfficiencyStat">
@@ -105,12 +101,12 @@
                   <h3 class="tooltip">
                     Speed
                     <p id="SpeedDisc" class="tooltiptext">
-                      Higher quality formats like PNG can take longer to load
-                      and display due to their larger file sizes and its more
-                      complex compression algorithms.
+                      OLED displays have very fast response times, often in the
+                      range of 0.1 to 1 millisecond, which allows for smooth
+                      motion and reduced motion blur.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumSpeedStat">100/100</h3>
+                  <h3 style="text-align: right" id="NumSpeedStat">95/100</h3>
                 </div>
                 <div class="Progessbar">
                   <div
@@ -131,14 +127,14 @@
                     </p>
                   </h3>
                   <h3 style="text-align: right" id="NumViewingAngleStat">
-                    100/100
+                    90/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
                     id="StatViewingAngle"
                     class="Progessbarfill"
-                    style="width: 100%"
+                    style="width: 90%"
                   ></div>
                 </div>
               </div>
@@ -224,8 +220,9 @@
         <p>How cheap the display is.</p>
       </div>
       <div class="CommentSection">
+        <h3 class="center">Leave a Comment</h3>
+        <div id="CommentDisplay" class="CommentDisplay"></div>
         <div class="CommentSectionHeader">
-          <h3>Leave a Comment</h3>
           <form>
             <label for="name">Name:</label>
             <input class="NameInput" type="text" id="name" name="name" /><br />
@@ -235,7 +232,6 @@
           </form>
           <br />
         </div>
-        <div id="CommentDisplay" class="CommentDisplay"></div>
       </div>
     </div>
     <footer>

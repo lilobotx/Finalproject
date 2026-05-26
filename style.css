@@ -515,6 +515,7 @@ textarea:hover {
 
 .comment {
   border-top: 2px solid rgb(105, 90, 0);
+  word-break: break-word;
 }
 
 iframe {

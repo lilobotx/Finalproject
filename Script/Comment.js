@@ -27,19 +27,7 @@ SubmitButton.addEventListener("click", function (event) {
         newComment.src =
           "https://musiclab.chromeexperiments.com/Song-Maker/embed/6378596402331648";
         CommenterName.textContent = name || "Chud";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
+        Commented(CommenterName, newComment);
       } else if (text.toLowerCase() == "deel 3") {
         const CommenterName = document.createElement("h3");
         const newComment = document.createElement("iframe");
@@ -48,19 +36,7 @@ SubmitButton.addEventListener("click", function (event) {
         newComment.src =
           "https://musiclab.chromeexperiments.com/Song-Maker/embed/5824173536051200";
         CommenterName.textContent = name || "Chud";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
+        Commented(CommenterName, newComment);
       } else if (
         text.toLowerCase() == "overtime" ||
         text.toLowerCase() == "sudden death"
@@ -72,32 +48,44 @@ SubmitButton.addEventListener("click", function (event) {
         newComment.src =
           "https://musiclab.chromeexperiments.com/Song-Maker/embed/5081172681555968";
         CommenterName.textContent = name || "King";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
+        Commented(CommenterName, newComment);
       } else if (text.toLowerCase().includes("wii")) {
         const newComment = document.createElement("audio");
         newComment.src = "../Assets/MM.opus";
         newComment.autoplay = true;
         newComment.loop = true;
         newComment.volume = 0.1;
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
+        Commented(CommenterName, newComment);
+      } else if (text.toLowerCase() == "doctor said") {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5841741193805824";
+        CommenterName.textContent = name || "Chud + Doctor";
+        Commented(CommenterName, newComment);
+      } else if (
+        text.toLowerCase() == "will you sail" ||
+        text.toLowerCase() == "spicies"
+      ) {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5817681592320000";
+        CommenterName.textContent = name || "Waffle Enjoyer";
+        Commented(CommenterName, newComment);
+      } else if (text.toLowerCase() == "new soup") {
+        const CommenterName = document.createElement("h3");
+        const newComment = document.createElement("iframe");
+        CommenterName.classList.add("commentername");
+        newComment.classList.add("comment");
+        newComment.src =
+          "https://musiclab.chromeexperiments.com/Song-Maker/embed/5684209074700288";
+        CommenterName.textContent = name || "Brother";
+        Commented(CommenterName, newComment);
       } else {
         const CommenterName = document.createElement("h3");
         const newComment = document.createElement("p");
@@ -105,19 +93,7 @@ SubmitButton.addEventListener("click", function (event) {
         newComment.classList.add("comment");
         newComment.textContent = text;
         CommenterName.textContent = name || "Anonymous";
-        CommentInput.value = "";
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            newComment,
-            document.getElementById("CommentDisplay").firstChild,
-          );
-        document
-          .getElementById("CommentDisplay")
-          .insertBefore(
-            CommenterName,
-            document.getElementById("CommentDisplay").firstChild,
-          );
+        Commented(CommenterName, newComment);
       }
     }
   } else {
@@ -127,43 +103,33 @@ SubmitButton.addEventListener("click", function (event) {
 
 document.addEventListener("DOMContentLoaded", function () {
   if (window.location.href.endsWith("files.html")) {
-    const CommenterName = document.createElement("h3");
-    const newComment = document.createElement("p");
-    CommenterName.classList.add("commentername");
-    newComment.classList.add("comment");
-    newComment.textContent = "useless info that no one asked for";
-    CommenterName.textContent = "Passive Agressive Chud";
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        newComment,
-        document.getElementById("CommentDisplay").firstChild,
-      );
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        CommenterName,
-        document.getElementById("CommentDisplay").firstChild,
-      );
+    AddFakeComment("Passive Agressive Chud", "USELESS INFORMATION!!!");
+    AddFakeComment("Anonymous", "I hate passive aggressive chuds.");
   } else if (window.location.href.endsWith("displays.html")) {
-    const CommenterName = document.createElement("h3");
-    const newComment = document.createElement("p");
-    CommenterName.classList.add("commentername");
-    newComment.classList.add("comment");
-    newComment.textContent =
-      "wow that was really cool. it was almost like my life's purpose was to see that and comment on it";
-    CommenterName.textContent = "Graphical G";
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        newComment,
-        document.getElementById("CommentDisplay").firstChild,
-      );
-    document
-      .getElementById("CommentDisplay")
-      .insertBefore(
-        CommenterName,
-        document.getElementById("CommentDisplay").firstChild,
-      );
+    AddFakeComment(
+      "Graphical G",
+      "Wow it is displaying what my display can display on my display that displays the thing that can be displayed. Wonderful.",
+    );
+    AddFakeComment(
+      "Random Schizo",
+      "What is he talking about? Is it all in his head? Is he a chud? Is he a king? Is he a waffle enjoyer? Is he a brother? Who knows.",
+    );
+    AddFakeComment("Lurker", "Insert (Does he know?)");
   }
 });
+
+function Commented(CommenterName, newComment) {
+  CommentInput.value = "";
+  document.getElementById("CommentDisplay").appendChild(CommenterName);
+  document.getElementById("CommentDisplay").appendChild(newComment);
+}
+
+function AddFakeComment(name, text) {
+  const CommenterName = document.createElement("h3");
+  const newComment = document.createElement("p");
+  CommenterName.classList.add("commentername");
+  newComment.classList.add("comment");
+  newComment.textContent = text;
+  CommenterName.textContent = name;
+  Commented(CommenterName, newComment);
+}
