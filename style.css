@@ -53,18 +53,6 @@
     -2px 2px 0px rgb(0, 0, 0);
 }
 
-.login {
-  --gradient: repeating-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.2) 0px,
-    rgba(0, 0, 0, 0.4) 100px,
-    rgba(0, 0, 0, 0.3) 200px,
-    rgba(0, 0, 0, 0.4) 300px,
-    rgba(0, 0, 0, 0.2) 400px,
-    rgba(0, 0, 0, 0.2) 500px
-  );
-}
-
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -129,6 +117,7 @@ body {
   background-size: 3px;
   background-attachment: fixed;
   animation: MKWBGScroll 1s infinite linear;
+  background-color: rgb(0, 0, 0);
 }
 
 button {
@@ -521,8 +510,15 @@ textarea:hover {
 iframe {
   display: block;
   margin: 30px auto;
-  max-width: 720px;
+  max-width: 680px;
   width: 100%;
+}
+
+textarea {
+  max-width: 680px;
+  width: 75%;
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 @media (max-width: 720px) {
@@ -545,5 +541,37 @@ iframe {
     max-width: 300px;
     top: 20px;
     right: -105%;
+  }
+
+  .Progressbar {
+    max-width: 300px;
+  }
+
+  .Progressbarfill {
+    max-width: 300px;
+  }
+
+  .Stats {
+    max-width: 300px;
+  }
+
+  .StatText {
+    margin: -10px;
+  }
+
+  .flexbuttongrid button {
+    max-height: 160px;
+    min-height: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    padding: 0px;
+  }
+
+  .flexbuttongrid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  textarea {
+    max-width: 300px;
   }
 }

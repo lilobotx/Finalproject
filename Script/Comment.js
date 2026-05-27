@@ -15,8 +15,6 @@ SubmitButton.addEventListener("click", function (event) {
       if (
         text.toLowerCase() === "it is only me" ||
         text.toLowerCase() === "it's only me" ||
-        text.toLowerCase() === "overture" ||
-        text.toLowerCase() === "deel 6" ||
         text.toLowerCase() === "its only me" ||
         text.toLowerCase() === "ouverture"
       ) {
@@ -55,7 +53,7 @@ SubmitButton.addEventListener("click", function (event) {
         newComment.autoplay = true;
         newComment.loop = true;
         newComment.volume = 0.1;
-        Commented(CommenterName, newComment);
+        CommentInput.value = "";
       } else if (text.toLowerCase() == "doctor said") {
         const CommenterName = document.createElement("h3");
         const newComment = document.createElement("iframe");
@@ -65,17 +63,14 @@ SubmitButton.addEventListener("click", function (event) {
           "https://musiclab.chromeexperiments.com/Song-Maker/embed/5841741193805824";
         CommenterName.textContent = name || "Chud + Doctor";
         Commented(CommenterName, newComment);
-      } else if (
-        text.toLowerCase() == "will you sail" ||
-        text.toLowerCase() == "spices"
-      ) {
+      } else if (text.toLowerCase() == "spices") {
         const CommenterName = document.createElement("h3");
         const newComment = document.createElement("iframe");
         CommenterName.classList.add("commentername");
         newComment.classList.add("comment");
         newComment.src =
           "https://musiclab.chromeexperiments.com/Song-Maker/embed/5817681592320000";
-        CommenterName.textContent = name || "Waffle Enjoyer";
+        CommenterName.textContent = name || "The Dutch";
         Commented(CommenterName, newComment);
       } else if (text.toLowerCase() == "new soup") {
         const CommenterName = document.createElement("h3");
@@ -112,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     AddFakeComment(
       "Random Schizo",
-      "What is he talking about? Is it all in his head? Is he a chud? Is he a king? Is he a waffle enjoyer? Is he a brother? Who knows.",
+      "What is he talking about? Is it all in his head? Is he a chud? Is he a king? Is he a dutch? Is he a brother? Who knows.",
     );
     AddFakeComment("Lurker", "Insert (Does he know?)");
   }

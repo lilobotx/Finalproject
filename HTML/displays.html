@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../Bilder/icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Assets/icon.png" type="image/x-icon" />
   </head>
   <body class="main">
     <header>
@@ -26,10 +26,10 @@
       </div>
     </header>
     <div class="main_section">
-      <h1>File Formats</h1>
+      <h1>Displays</h1>
       <div class="text_section">
         <div class="intro section">
-          <h2 class="center">Compare File Formats</h2>
+          <h2 class="center">Compare Displays</h2>
           <div class="CompareFlex">
             <div class="SelectedFormat">
               <h2>Selected</h2>
@@ -41,17 +41,24 @@
                 <div class="StatText">
                   <h3 class="tooltip">
                     Color
-                    <p id="QualityDisc" class="tooltiptext">
-                      OLED screens have exellent color reproduction.
+                    <p id="ColorDisc" class="tooltiptext">
+                      Each pixel emits its own light, allowing for true black
+                      levels and vibrant colors.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumQualityStat">100/100</h3>
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumColorStat"
+                  >
+                    95/100
+                  </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatColor"
+                    id="ColorStat"
                     class="Progessbarfill"
-                    style="width: 100%"
+                    style="width: 95%"
                   ></div>
                 </div>
               </div>
@@ -64,11 +71,17 @@
                       off individual pixels.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumQualityStat">100/100</h3>
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumContrastStat"
+                  >
+                    100/100
+                  </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatContrast"
+                    id="ContrastStat"
                     class="Progessbarfill"
                     style="width: 100%"
                   ></div>
@@ -79,18 +92,22 @@
                   <h3 class="tooltip">
                     Efficiency
                     <p id="EfficiencyDisc" class="tooltiptext">
-                      OLED displays are more energy-efficient than traditional
-                      LCDs because they do not require a backlight. Each pixel
-                      emits its own light.
+                      OLED screens can be less energy efficient than other
+                      display technologies, especially when displaying bright
+                      content, as each pixel emits its own light.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumEfficiencyStat">
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumEfficiencyStat"
+                  >
                     75/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatEfficiency"
+                    id="EfficiencyStat"
                     class="Progessbarfill"
                     style="width: 75%"
                   ></div>
@@ -106,13 +123,19 @@
                       motion and reduced motion blur.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumSpeedStat">95/100</h3>
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumSpeedStat"
+                  >
+                    95/100
+                  </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatSpeed"
+                    id="SpeedStat"
                     class="Progessbarfill"
-                    style="width: 100%"
+                    style="width: 95%"
                   ></div>
                 </div>
               </div>
@@ -121,18 +144,21 @@
                   <h3 class="tooltip">
                     Viewing Angle
                     <p id="ViewingAngleDisc" class="tooltiptext">
-                      The viewing angle of a display refers to the maximum angle
-                      at which the display can be viewed with acceptable image
-                      quality.
+                      OLED screens have wide viewing angles, maintaining color
+                      accuracy and contrast even when viewed from the side.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumViewingAngleStat">
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumViewingAngleStat"
+                  >
                     90/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatViewingAngle"
+                    id="ViewingAngleStat"
                     class="Progessbarfill"
                     style="width: 90%"
                   ></div>
@@ -146,13 +172,17 @@
                       OLED displays are expensive.
                     </p>
                   </h3>
-                  <h3 style="text-align: right" id="NumAffordabilityStat">
+                  <h3
+                    class="StatNumber"
+                    style="text-align: right"
+                    id="NumAffordabilityStat"
+                  >
                     10/100
                   </h3>
                 </div>
                 <div class="Progessbar">
                   <div
-                    id="StatAffordability"
+                    id="AffordabilityStat"
                     class="Progessbarfill"
                     style="width: 10%"
                   ></div>
