@@ -1,4 +1,4 @@
-const PNGButton = document.getElementById("PNGButton");
+const PNGButton = document.getElementById("PNGButton"); //alla knappar och element som behövs för att byta display och ändra stats.
 const JPGButton = document.getElementById("JPGButton");
 const GIFButton = document.getElementById("GIFButton");
 const MP4Button = document.getElementById("MP4Button");
@@ -21,6 +21,7 @@ const CompatibilityDisc = document.getElementById("CompatibilityDisc");
 let selectedFormat = "../Assets/PNG.png";
 
 PNGButton.addEventListener("click", function (event) {
+  //ändrar stats och bild
   console.log("PNG Button Clicked");
   selectedFormat = "../Assets/PNG.png";
   SelectedIMG.src = selectedFormat;

@@ -1,4 +1,4 @@
-const OLEDButton = document.getElementById("OLEDButton");
+const OLEDButton = document.getElementById("OLEDButton"); //alla knappar och element som behövs för att byta display och ändra stats.
 const IPSButton = document.getElementById("IPSButton");
 const VAButton = document.getElementById("VAButton");
 const TNButton = document.getElementById("TNButton");
@@ -27,6 +27,7 @@ const NumAffordabilityStat = document.getElementById("NumAffordabilityStat");
 let selectedFormat = "../Assets/PNG.png";
 
 OLEDButton.addEventListener("click", function (event) {
+  //ändrar stats och bild
   selectedFormat = "../Assets/OLED.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "95%";

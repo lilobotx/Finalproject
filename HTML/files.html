@@ -1,10 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>Digitalt Skapande</title>
     <link rel="stylesheet" href="../style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--mobil scaling-->
     <link rel="shortcut icon" href="../Assets/icon.png" type="image/x-icon" />
   </head>
   <body class="main">
@@ -25,216 +26,181 @@
         </nav>
       </div>
     </header>
-    <div class="main_section">
-      <h1>File Formats</h1>
-      <div class="text_section">
-        <div class="intro section">
-          <h2 class="center">Compare File Formats</h2>
-          <div class="CompareFlex">
-            <div class="SelectedFormat">
-              <h2>Selected</h2>
-              <img id="SelectedIMG" src="../Assets/PNG.png" alt="PNG" />
-            </div>
-            <div class="Stats">
-              <h2>Stats</h2>
-              <div class="Statelement">
-                <div class="StatText">
-                  <h3 class="tooltip">
-                    Quality
-                    <p id="QualityDisc" class="tooltiptext">
-                      PNG is a lossless format, which means that it preserves
-                      all image details and colors in up to 8-bit per channels
-                      RGBA.
-                    </p>
-                  </h3>
-                  <h3
-                    class="StatNumber"
-                    style="text-align: right"
-                    id="NumQualityStat"
-                  >
-                    95/100
-                  </h3>
-                </div>
-                <div class="Progessbar">
-                  <div
-                    id="StatQuality"
-                    class="Progessbarfill"
-                    style="width: 95%"
-                  ></div>
-                </div>
-              </div>
-              <div class="Statelement">
-                <div class="StatText">
-                  <h3 class="tooltip">
-                    Efficiency
-                    <p id="EfficiencyDisc" class="tooltiptext">
-                      PNG uses lossless compression reducing file size and
-                      preserving all image details and colors. However, it is
-                      not as efficient as lossy formats, which can achieve much
-                      smaller file sizes by sacrificing some image quality.
-                    </p>
-                  </h3>
-                  <h3
-                    class="StatNumber"
-                    style="text-align: right"
-                    id="NumEfficiencyStat"
-                  >
-                    75/100
-                  </h3>
-                </div>
-                <div class="Progessbar">
-                  <div
-                    id="StatEfficiency"
-                    class="Progessbarfill"
-                    style="width: 75%"
-                  ></div>
-                </div>
-              </div>
-              <div class="Statelement">
-                <div class="StatText">
-                  <h3 class="tooltip">
-                    Speed
-                    <p id="SpeedDisc" class="tooltiptext">
-                      Higher quality formats like PNG can take longer to load
-                      and display due to their larger file sizes and its more
-                      complex compression algorithms.
-                    </p>
-                  </h3>
-                  <h3
-                    class="StatNumber"
-                    style="text-align: right"
-                    id="NumSpeedStat"
-                  >
-                    50/100
-                  </h3>
-                </div>
-                <div class="Progessbar">
-                  <div
-                    id="StatSpeed"
-                    class="Progessbarfill"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="Statelement">
-                <div class="StatText">
-                  <h3 class="tooltip">
-                    Compatibility
-                    <p id="CompatibilityDisc" class="tooltiptext">
-                      PNG is widely supported by web browsers, image editing
-                      software, and other applications.
-                    </p>
-                  </h3>
-                  <h3
-                    class="StatNumber"
-                    style="text-align: right"
-                    id="NumCompatibilityStat"
-                  >
-                    95/100
-                  </h3>
-                </div>
-                <div class="Progessbar">
-                  <div
-                    id="StatCompatibility"
-                    class="Progessbarfill"
-                    style="width: 95%"
-                  ></div>
-                </div>
-              </div>
-            </div>
+    <h1>File Formats</h1>
+    <h2 class="center">Compare File Formats</h2>
+    <div class="CompareFlex">
+      <div class="SelectedFormat">
+        <h2>Selected</h2>
+        <img id="SelectedIMG" src="../Assets/PNG.png" alt="PNG" />
+      </div>
+      <div class="Stats">
+        <h2>Stats</h2>
+        <div class="Statelement">
+          <div class="StatText">
+            <h3 class="tooltip">
+              Quality
+              <span id="QualityDisc" class="tooltiptext">
+                PNG is a lossless format, which means that it preserves all
+                image details and colors in up to 8-bit per channels RGBA.
+              </span>
+            </h3>
+            <h3 class="StatNumber" id="NumQualityStat">95/100</h3>
+          </div>
+          <div class="Progressbar">
+            <div
+              id="StatQuality"
+              class="Progressbarfill"
+              style="width: 95%"
+            ></div>
+            <!--width är inne i html för att göra det lättare att ändra i javascript-->
           </div>
         </div>
-        <div class="flexbuttongrid">
-          <button id="PNGButton">
-            <img
-              src="../Assets/PNG.png"
-              alt="Image that shows off the PNG format. PNG Grapich with shapes and stuff"
-              width="150px"
-            />
-          </button>
-          <button id="JPGButton">
-            <img
-              src="../Assets/JPG.jpg"
-              alt="Image that shows off the Jpeg format. Shit quality image of IQ to High?"
-              width="150px"
-            />
-          </button>
-          <button id="GIFButton">
-            Gif<img
-              src="../Assets/GIF.gif"
-              alt="Image that shows off the GIF format. Doorbell Chud Gem Alert"
-              width="150px"
-            />
-          </button>
-          <button id="MP4Button">
-            MP4
-            <video
-              autoplay
-              loop
-              src="../Assets/hadi-shatter.mp4"
-              width="150px"
-            ></video>
-          </button>
-          <button id="WEBPButton">
-            <img
-              src="../Assets/WebP.webp"
-              alt="German castle WebP"
-              width="150px"
-            />
-          </button>
-          <button id="SVGButton">
-            <img
-              src="../Assets/SVG.svg"
-              alt="Image that shows off the SVG format. File with SVG on it"
-              width="128px"
-            />
-          </button>
+        <div class="Statelement">
+          <div class="StatText">
+            <h3 class="tooltip">
+              Efficiency
+              <span id="EfficiencyDisc" class="tooltiptext">
+                PNG uses lossless compression reducing file size and preserving
+                all image details and colors. However, it is not as efficient as
+                lossy formats, which can achieve much smaller file sizes by
+                sacrificing some image quality.
+              </span>
+            </h3>
+            <h3 class="StatNumber" id="NumEfficiencyStat">75/100</h3>
+          </div>
+          <div class="Progressbar">
+            <div
+              id="StatEfficiency"
+              class="Progressbarfill"
+              style="width: 75%"
+            ></div>
+          </div>
+        </div>
+        <div class="Statelement">
+          <div class="StatText">
+            <h3 class="tooltip">
+              Speed
+              <span id="SpeedDisc" class="tooltiptext">
+                Higher quality formats like PNG can take longer to load and
+                display due to their larger file sizes and its more complex
+                compression algorithms.
+              </span>
+            </h3>
+            <h3 class="StatNumber" id="NumSpeedStat">50/100</h3>
+          </div>
+          <div class="Progressbar">
+            <div
+              id="StatSpeed"
+              class="Progressbarfill"
+              style="width: 50%"
+            ></div>
+          </div>
+        </div>
+        <div class="Statelement">
+          <div class="StatText">
+            <h3 class="tooltip">
+              Compatibility
+              <span id="CompatibilityDisc" class="tooltiptext">
+                PNG is widely supported by web browsers, image editing software,
+                and other applications.
+              </span>
+            </h3>
+            <h3 class="StatNumber" id="NumCompatibilityStat">95/100</h3>
+          </div>
+          <div class="Progressbar">
+            <div
+              id="StatCompatibility"
+              class="Progressbarfill"
+              style="width: 95%"
+            ></div>
+          </div>
         </div>
       </div>
-      <div>
-        <h1>Statistics Description</h1>
-        <h3>Quality</h3>
-        <p>
-          This is the quality of the format. It shows how well the format
-          preserves image details and colors. It is based on the average quality
-          of a image from this format and not the maximum quality.
-        </p>
-        <h3>Efficiency</h3>
-        <p>
-          This is the efficiency of the format. It shows how well the format
-          balances quality and file size.
-        </p>
-        <h3>Speed</h3>
-        <p>
-          This is the speed of the format. It shows how quickly the format can
-          be loaded and displayed in web based senarios. This is mostly based on
-          the file size of the format where lower file sizes will score higher.
-        </p>
-        <h3>Compatibility</h3>
-        <p>
-          This is the compatibility of the format. It shows how many devices and
-          software can open the format.
-        </p>
+      <div class="flexbuttongrid">
+        <button id="PNGButton">
+          <img
+            src="../Assets/PNG.png"
+            alt="Image that shows off the PNG format. PNG Grapich with shapes and stuff"
+            width="150"
+          />
+        </button>
+        <button id="JPGButton">
+          <img
+            src="../Assets/JPG.jpg"
+            alt="Image that shows off the Jpeg format. Shit quality image of IQ to High?"
+            width="150"
+          />
+        </button>
+        <button id="GIFButton">
+          Gif<img
+            src="../Assets/GIF.gif"
+            alt="Image that shows off the GIF format. Doorbell Chud Gem Alert"
+            width="150"
+          />
+        </button>
+        <button id="MP4Button">
+          MP4
+          <video
+            autoplay
+            loop
+            src="../Assets/hadi-shatter.mp4"
+            width="150"
+          ></video>
+        </button>
+        <button id="WEBPButton">
+          <img src="../Assets/WebP.webp" alt="German castle WebP" width="150" />
+        </button>
+        <button id="SVGButton">
+          <img
+            src="../Assets/SVG.svg"
+            alt="Image that shows off the SVG format. File with SVG on it"
+            width="150"
+          />
+        </button>
       </div>
-      <div class="CommentSection">
-        <h3 class="center">Leave a Comment</h3>
-        <div id="CommentDisplay" class="CommentDisplay"></div>
-        <div class="CommentSectionHeader">
-          <form>
-            <label for="name">Name:</label>
-            <input class="NameInput" type="text" id="name" name="name" /><br />
-            <label for="comment">Comment:</label><br />
-            <textarea id="comment" name="comment"></textarea><br />
-            <input id="submit" type="submit" value="Comment" />
-          </form>
-          <br />
-        </div>
+    </div>
+    <h1>Statistics Description</h1>
+    <h2>Quality</h2>
+    <p>
+      This is the quality of the format. It shows how well the format preserves
+      image details and colors. It is based on the average quality of a image
+      from this format and not the maximum quality.
+    </p>
+    <h2>Efficiency</h2>
+    <p>
+      This is the efficiency of the format. It shows how well the format
+      balances quality and file size.
+    </p>
+    <h2>Speed</h2>
+    <p>
+      This is the speed of the format. It shows how quickly the format can be
+      loaded and displayed in web based scenarios. This is mostly based on the
+      file size of the format where lower file sizes will score higher.
+    </p>
+    <h2>Compatibility</h2>
+    <p>
+      This is the compatibility of the format. It shows how many devices and
+      software can open the format.
+    </p>
+    <div class="CommentSection">
+      <h3 class="center">Leave a Comment</h3>
+      <div id="CommentDisplay" class="CommentDisplay"></div>
+      <div class="CommentSectionHeader">
+        <form>
+          <label for="name">Name:</label>
+          <input class="NameInput" type="text" id="name" name="name" />
+          <div class="space"></div>
+          <label for="comment">Comment</label>
+          <div class="space"></div>
+          <textarea id="comment" name="comment"></textarea>
+          <div class="space"></div>
+          <input id="submit" type="submit" value="Comment" />
+        </form>
+        <div class="space"></div>
       </div>
     </div>
     <footer>
-      <div>
-        <p>Lilobotx</p>
-      </div>
+      <p>Lilobotx</p>
     </footer>
     <script src="../Script/Files.js"></script>
     <script src="../Script/Comment.js"></script>
