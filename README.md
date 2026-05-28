@@ -3,7 +3,7 @@ With the power of this powerful site you can compare statistics between file for
 ## Features
 - Statistics viewer
 - Statistics discription tooltips
-- Comment section (local only no save.)
+- Comment section (local only no save)
 - XSS Proof
 - Other
 
