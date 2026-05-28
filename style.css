@@ -517,12 +517,12 @@ iframe {
   /*google saken*/
   display: block;
   margin: 30px auto;
-  max-width: 610px;
+  max-width: 680px;
   width: 100%;
 }
 
 textarea {
-  max-width: 610px;
+  max-width: 680px;
   width: 75%;
   resize: vertical;
   box-sizing: border-box;
