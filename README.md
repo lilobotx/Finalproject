@@ -15,7 +15,7 @@ With the power of this powerful site you can compare statistics between file for
 
 - ### XSS Proof
 
-    User input only has accsess to textContent. Iframes can only be accsess with predetermined phrases/commands.
+    User input only has accsess to textContent which cannot execute HTML. Iframes can only be accsess with predetermined phrases/commands and users cannot link any specific src.
 
 - ### Other
 
