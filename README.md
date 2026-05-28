@@ -1,5 +1,13 @@
 # Finalproject - Digital Creation Website
-## Browser Compatibility
+With the power of this powerful site you can compare statistics between file formats or display types
+## Features
+* ### Statistics viewer
+* ### Statistics discription tooltips
+* ### Comment section (local only no save.)
+* ### XSS Proof
+* ### Other
+
+## Browser Compatibility (Edge, Chorme, Firefox)
 Some images are scuffed because the full size screenshot tools aren't that great. All 3 web browsers work great.
 ### Chrome Index
 <img width="1350" height="970" alt="image" src="https://github.com/user-attachments/assets/b8d866f9-36ac-4d33-9c94-b33226cdd3a4" />
