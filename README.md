@@ -1,11 +1,23 @@
 # Finalproject - Digital Creation Website
 With the power of this powerful site you can compare statistics between file formats or display types and talk to a wall with the comment section of schizos.
 ## Features
-- Statistics viewer
-- Statistics discription tooltips
-- Comment section (local only no save)
-- XSS Proof
-- Other
+- ### Statistics viewer
+
+    Press buttons to display somethings statistics
+
+- ### Statistics discription tooltips
+
+    Hover over a statistic to display additional information
+
+- ### Comment section (local only no save)
+  
+    Type a name and comment. Can also execute specific built in commands.
+
+- ### XSS Proof
+
+    User input only has accsess to textContent. Iframes can only be accsess with predetermined phrases/commands.
+
+- ### Other
 
 ## Browser Compatibility (Chorme, Edge, Firefox)
 Some images are scuffed because the full size screenshot tools aren't that great. All 3 web browsers work great.
