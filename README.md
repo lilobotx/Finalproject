@@ -1,7 +1,7 @@
 # Finalproject - Digital Creation Website
 With the power of this powerful site you can compare statistics between file formats or display types and talk to a wall with the comment section of schizos.
 
-[https://lilobotx.github.io/Finalproject/](Site) <-- if it takes you to the read me for some reason click the Finalproject link on top
+https://lilobotx.github.io/Finalproject <-- if it takes you to the read me for some reason click the Finalproject link on top
 ## Features
 - ### Statistics viewer
 
