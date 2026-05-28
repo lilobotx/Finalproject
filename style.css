@@ -53,18 +53,6 @@
     -2px 2px 0px rgb(0, 0, 0);
 }
 
-.login {
-  --gradient: repeating-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.2) 0px,
-    rgba(0, 0, 0, 0.4) 100px,
-    rgba(0, 0, 0, 0.3) 200px,
-    rgba(0, 0, 0, 0.4) 300px,
-    rgba(0, 0, 0, 0.2) 400px,
-    rgba(0, 0, 0, 0.2) 500px
-  );
-}
-
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -77,6 +65,7 @@
   right: 0px;
   background-size: contain;
   background-image: url("./Assets/Navbar.png");
+  z-index: 1;
 }
 
 .navbar ul {
@@ -87,20 +76,13 @@
   display: flex;
 }
 
-@keyframes MKWBorder {
-  /*Navbar animation*/
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: 10000px;
-  }
-}
-
 @keyframes MKWBGScroll {
   /*Background animation*/
+  0% {
+    background-position: 0px 0px;
+  }
   100% {
-    background-position: 0px -2000px;
+    background-position: 0px 12px;
   }
 }
 
@@ -127,72 +109,15 @@
   text-shadow: none;
 }
 
-@media (max-width: 720px) {
-  /*Se till att navbar får plats för mobiler*/
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar ul li a {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-}
-
 body {
-  margin: 0;
+  margin: 0; /*fixar border problem med footer och kanske navbar*/
   padding: 0;
   background-image: url("./Assets/Background.png");
-  background-size: 1440px;
+  background-repeat: repeat;
+  background-size: 3px;
   background-attachment: fixed;
-  animation: MKWBGScroll 140s infinite linear;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0px auto;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.flex2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0px auto;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  gap: 20px;
-}
-
-.flex2 img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0px auto;
-  flex-wrap: wrap;
-  max-width: 128px;
-}
-
-.flex2 p {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0px auto;
-  flex-wrap: wrap;
-  max-width: 128px;
-}
-
-.flex img {
-  height: auto;
-  width: 256px;
-}
-
-.login_special {
-  padding-top: 360px;
+  animation: MKWBGScroll 1s infinite linear;
+  background-color: rgb(0, 0, 0);
 }
 
 button {
@@ -289,7 +214,7 @@ h1:hover {
 }
 
 @keyframes HCool {
-  /*Button animation*/
+  /*Animation som härmar glans*/
   0% {
     border-top: 4px solid rgba(255, 255, 255, 0.192);
     border-bottom: 4px solid rgba(255, 255, 255, 0.096);
@@ -313,6 +238,7 @@ h2 {
 }
 
 h2:hover {
+  /*om min webbsida ignorerar min mus får jag narcissist problem ahh. nä men det är kool ändå.*/
   text-shadow: var(--outlinesmallselected);
   transition: all 0.2s ease;
 }
@@ -382,4 +308,297 @@ footer p {
     0px 0px 15px rgb(255, 255, 255),
     0px 0px 20px rgb(255, 255, 255),
     0px 0px 40px rgb(255, 255, 255);
+}
+
+.flexbuttongrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  max-width: 650px;
+  gap: 16px;
+}
+
+.flexbuttongrid button {
+  max-height: 200px;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  padding: 0px;
+}
+
+.flexbuttongrid button:hover {
+  padding: 0px;
+}
+
+.SelectedFormat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  max-width: 600px;
+  gap: 20px;
+  transform: translateX(100px);
+}
+
+.SelectedFormat img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  max-width: 256px;
+}
+
+.SelectedFormat h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  max-width: 128px;
+}
+
+.Progressbar {
+  /*tomma baren*/
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: -15px auto;
+  max-width: 400px;
+}
+
+.Progressbarfill {
+  height: 10px;
+  width: 50%;
+  background: var(--gradient);
+  border-radius: 10px;
+  animation: ProgressAnim 2s forwards;
+  max-width: 400px;
+  margin: 0px;
+}
+
+.CompareFlex {
+  /*statistic jämförelse flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 20px;
+}
+
+.Stats {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: 400px;
+  transform: translateY(-30px);
+}
+
+.StatNumber {
+  text-align: right;
+}
+
+.Statelement h3 {
+  margin: 30px 0px 10px 0px;
+}
+
+.StatText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tooltip {
+  /*Credit https://www.w3schools.com/css/css_tooltip.asp*/
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  animation: TooltipAnim 0.5s infinite alternate;
+}
+
+@keyframes TooltipAnim {
+  /*indikerar att man kan hovera över texten och nånting händer*/
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    color: rgb(255, 243, 175);
+  }
+}
+
+.tooltiptext {
+  display: block;
+  visibility: hidden;
+  max-width: 310px;
+  min-width: 310px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+label {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin: 30px auto 10px auto;
+  max-width: 90%;
+  width: 680px;
+  line-height: 1.3;
+  text-shadow: 0px 5px 0px rgb(0, 0, 0);
+  transition: all 0.2s ease;
+  text-shadow: var(--outlinesmall);
+}
+
+label:hover {
+  text-shadow: var(--outlinesmallselected);
+  transition: all 0.2s ease;
+}
+
+#comment {
+  width: 680px;
+  height: 150px;
+}
+
+.CommentSectionHeader {
+  margin-top: 50px;
+  text-align: center;
+}
+
+input,
+textarea {
+  background-color: #00000000;
+  padding: 15px 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: var(--outlinesmall);
+  box-shadow: 0px 5px 0px rgb(0, 0, 0, 0.5);
+  border-top: 4px groove rgb(105, 90, 0);
+  border-left: 6px groove rgb(80, 70, 0);
+  border-right: 6px ridge rgb(80, 70, 0);
+  border-bottom: 4px ridge rgb(105, 90, 0);
+  outline-color: rgb(50, 45, 0);
+  transition: all 0.2s ease;
+  margin: 10px auto;
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0px 10px 0px rgb(0, 0, 0, 0.5);
+  animation: ButtonYellow 2s infinite linear;
+  text-shadow: var(--outlinesmallselected);
+  background-color: rgb(105, 90, 0, 0.4);
+}
+
+.commentername {
+  line-height: 0px;
+}
+
+.comment {
+  border-top: 2px solid rgb(105, 90, 0);
+  word-break: break-word;
+}
+
+iframe {
+  /*google saken*/
+  display: block;
+  margin: 30px auto;
+  max-width: 610px;
+  width: 100%;
+}
+
+textarea {
+  max-width: 610px;
+  width: 75%;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.space {
+  /*<br> utan br*/
+  height: 30px;
+}
+
+@media (max-width: 720px) {
+  /*Se till att navbar får plats för mobiler + andra mobil anpassningar*/
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar ul li a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .SelectedFormat {
+    transform: translateX(0px);
+  }
+
+  .Statelement h3 {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .tooltiptext {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 5px;
+    transform: none;
+    min-width: 250px;
+    max-width: 80vw;
+    right: auto;
+  }
+
+  .Progressbar {
+    max-width: 300px;
+  }
+
+  .Progressbarfill {
+    max-width: 300px;
+  }
+
+  .Stats {
+    max-width: 300px;
+    transform: translateY(0px);
+  }
+
+  .flexbuttongrid button {
+    max-height: 160px;
+    min-height: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    padding: 0px;
+  }
+
+  h2,
+  h3,
+  p {
+    width: auto;
+    max-width: 90%;
+  }
+
+  .flexbuttongrid {
+    max-width: 340px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  textarea {
+    max-width: 300px;
+  }
 }
