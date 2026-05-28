@@ -1,11 +1,11 @@
 # Finalproject - Digital Creation Website
 With the power of this powerful site you can compare statistics between file formats or display types
 ## Features
-- ### Statistics viewer
-- ### Statistics discription tooltips
-- ### Comment section (local only no save.)
-- ### XSS Proof
-- ### Other
+- Statistics viewer
+- Statistics discription tooltips
+- Comment section (local only no save.)
+- XSS Proof
+- Other
 
 ## Browser Compatibility (Edge, Chorme, Firefox)
 Some images are scuffed because the full size screenshot tools aren't that great. All 3 web browsers work great.
