@@ -18,12 +18,12 @@ const EfficiencyDisc = document.getElementById("EfficiencyDisc");
 const SpeedDisc = document.getElementById("SpeedDisc");
 const CompatibilityDisc = document.getElementById("CompatibilityDisc");
 
-let selectedFormat = "../Assets/PNG.png";
+let selectedFormat = "Assets/PNG.png";
 
 PNGButton.addEventListener("click", function (event) {
   //ändrar stats och bild
   console.log("PNG Button Clicked");
-  selectedFormat = "../Assets/PNG.png";
+  selectedFormat = "Assets/PNG.png";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "95/100";
   NumEfficiencyStat.textContent = "75/100";
@@ -45,7 +45,7 @@ PNGButton.addEventListener("click", function (event) {
 
 JPGButton.addEventListener("click", function (event) {
   console.log("JPG Button Clicked");
-  selectedFormat = "../Assets/JPG.jpg";
+  selectedFormat = "Assets/JPG.jpg";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "50/100";
   NumEfficiencyStat.textContent = "90/100";
@@ -66,7 +66,7 @@ JPGButton.addEventListener("click", function (event) {
 
 GIFButton.addEventListener("click", function (event) {
   console.log("GIF Button Clicked");
-  selectedFormat = "../Assets/GIF.gif";
+  selectedFormat = "Assets/GIF.gif";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "25/100";
   NumEfficiencyStat.textContent = "25/100";
@@ -87,7 +87,7 @@ GIFButton.addEventListener("click", function (event) {
 
 MP4Button.addEventListener("click", function (event) {
   console.log("MP4 Button Clicked");
-  selectedFormat = "../Assets/hadi-shatter.gif";
+  selectedFormat = "Assets/hadi-shatter.gif";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "60/100";
   NumEfficiencyStat.textContent = "70/100";
@@ -109,7 +109,7 @@ MP4Button.addEventListener("click", function (event) {
 
 WEBPButton.addEventListener("click", function (event) {
   console.log("WEBP Button Clicked");
-  selectedFormat = "../Assets/WebP.webp";
+  selectedFormat = "Assets/WebP.webp";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "70/100";
   NumEfficiencyStat.textContent = "95/100";
@@ -130,7 +130,7 @@ WEBPButton.addEventListener("click", function (event) {
 
 SVGButton.addEventListener("click", function (event) {
   console.log("SVG Button Clicked");
-  selectedFormat = "../Assets/SVG.svg";
+  selectedFormat = "Assets/SVG.svg";
   SelectedIMG.src = selectedFormat;
   NumQualityStat.textContent = "100/100";
   NumEfficiencyStat.textContent = "100/100";

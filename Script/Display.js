@@ -24,11 +24,11 @@ const NumSpeedStat = document.getElementById("NumSpeedStat");
 const NumViewingAngleStat = document.getElementById("NumViewingAngleStat");
 const NumAffordabilityStat = document.getElementById("NumAffordabilityStat");
 
-let selectedFormat = "../Assets/PNG.png";
+let selectedFormat = "Assets/PNG.png";
 
 OLEDButton.addEventListener("click", function (event) {
   //ändrar stats och bild
-  selectedFormat = "../Assets/OLED.png";
+  selectedFormat = "Assets/OLED.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "95%";
   ContrastStat.style.width = "100%";
@@ -56,7 +56,7 @@ OLEDButton.addEventListener("click", function (event) {
 });
 
 IPSButton.addEventListener("click", function (event) {
-  selectedFormat = "../Assets/IPS.png";
+  selectedFormat = "Assets/IPS.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "80%";
   ContrastStat.style.width = "70%";
@@ -83,7 +83,7 @@ IPSButton.addEventListener("click", function (event) {
 });
 
 VAButton.addEventListener("click", function (event) {
-  selectedFormat = "../Assets/VA.png";
+  selectedFormat = "Assets/VA.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "70%";
   ContrastStat.style.width = "80%";
@@ -109,7 +109,7 @@ VAButton.addEventListener("click", function (event) {
 });
 
 TNButton.addEventListener("click", function (event) {
-  selectedFormat = "../Assets/TN.png";
+  selectedFormat = "Assets/TN.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "60%";
   ContrastStat.style.width = "40%";
@@ -136,7 +136,7 @@ TNButton.addEventListener("click", function (event) {
 });
 
 CRTButton.addEventListener("click", function (event) {
-  selectedFormat = "../Assets/CRT.png";
+  selectedFormat = "Assets/CRT.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "80%";
   ContrastStat.style.width = "70%";
@@ -160,7 +160,7 @@ CRTButton.addEventListener("click", function (event) {
 });
 
 MicroLEDButton.addEventListener("click", function (event) {
-  selectedFormat = "../Assets/MicroLED.png";
+  selectedFormat = "Assets/MicroLED.png";
   SelectedIMG.src = selectedFormat;
   ColorStat.style.width = "100%";
   ContrastStat.style.width = "100%";

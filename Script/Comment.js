@@ -52,7 +52,7 @@ SubmitButton.addEventListener("click", function (event) {
       } else if (text.toLowerCase().includes("wii")) {
         //detta är inte ett bug
         const newComment = document.createElement("audio");
-        newComment.src = "../Assets/MM.opus";
+        newComment.src = "Assets/MM.opus";
         newComment.autoplay = true;
         newComment.loop = true;
         newComment.volume = 0.1;
