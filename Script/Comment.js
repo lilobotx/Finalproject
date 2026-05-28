@@ -13,6 +13,13 @@ SubmitButton.addEventListener("click", function (event) {
       //24 bokstäver namn gräns annars namn blir för långt.
       alert("Name cannot exceed 24 characters.");
       return;
+    }
+    if (text.length > 16000) {
+      //16000 bokstäver kommentar gräns annars kommentar blir för lång.
+      alert(
+        "I will not let you bomb the comment section with a comment that long.",
+      );
+      return;
     } else {
       if (
         text.toLowerCase() === "it is only me" || //massor av random google song maker låtar som jag har gjort och embeddad som går att få fram via att skriva ett visst ord/fras. Google fångar in cookies för ingen anledning. Job had one bro.
