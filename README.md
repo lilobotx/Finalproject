@@ -15,9 +15,9 @@ This is the experimental version. The only difference is the code is cleaner and
   
     Type a name and comment. Can also execute specific built in commands.
 
-- ### XSS Proof
+- ### XSS Proof (hopefully)
 
-    User input only has accsess to textContent which cannot execute HTML. Iframes can only be accsess with predetermined phrases/commands and users cannot link any specific src.
+    User input only has access to textContent which cannot execute HTML. Iframes can only be access with predetermined phrases/commands and users cannot link any specific src as they are hardcoded. The experimental version is slightly more "secure" but with the current set of features it should be     fine.
 
 - ### Other
 
