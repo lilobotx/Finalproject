@@ -1,7 +1,7 @@
 # Finalproject - Digital Creation Website
 With the power of this powerful site you can compare statistics between file formats or display types and talk to a wall with the comment section of schizos.
 
-This is the experimental version. The only difference is the code is cleaner and slightly safer.
+This is the experimental version. The only difference is the code is cleaner and slightly safer. I'm too lazy to fully rework the code and change main. Surely nothing happens.
 ## Features
 - ### Statistics viewer
 
